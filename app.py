@@ -9,7 +9,7 @@ client = anthropic.Anthropic(
     api_key=os.environ.get("ANTHROPIC_API_KEY"),
 )
 
-with open("image.jpg", "rb") as image:
+with open("image.jpg", "rb") as image: #読み込ませたい画像をimage.jpgとしてディレクトリ内に配置
     encoded_image = base64.b64encode(image.read()).decode("utf-8")
 
 message = client.messages.create(
